@@ -20,6 +20,8 @@ To copy the text to your clipboard, click the copy paste button that appears in 
 
 # Application Link
 
+https://tmcmanus95.github.io/lorem-ipsong/
+
 # License
 
 MIT License
