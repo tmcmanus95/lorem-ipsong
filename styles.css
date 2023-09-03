@@ -1,0 +1,172 @@
+:root {
+  --mainBackgroundColor: honeydew;
+  --mainTextBackground: #d2e2e1;
+  --mainTitleBackground: #d2e2e1;
+  --mainTitleText: #d2e2e1;
+  --mainBorder: #304e4f;
+
+  --blackMetalBackground: darkred;
+  --blackMetalTextBackground: black;
+  --blackMetalTitleBackground: darkred;
+  --blackMetalBoxShadow: ghostwhite;
+  --blackMetalTitleText: ghostwhite;
+  --blackMetalGenreSelectBackground: ghostwhite;
+  --blackMetalGenreSelectText: black;
+  --blackMetalButtonBackground: ghostwhite;
+  --blackMetalButtonText: black;
+  --blackMetalBorder: ghostwhite;
+
+  --indieBackground: lemonchiffon; /* 5% */
+  --indieTextBackground: honeydew; /* 76% */
+  --indieTitleBackground: lavender; /* 10% */
+  --indieBoxShadow: black; /* 2% */
+  --indieTitleText: black;
+  --indieGenreSelectBackground: lavender; /* 2% */
+  --indieGenreSelectText: black; /* 1% */
+  --indieButtonBackground: powderblue; /* 2% */
+  --indieButtonText: black; /* 2% */
+  --indieBorder: powderblue; /* 1% */
+
+  --rapBackground: blue;
+  --rapTextBackground: gold;
+  --rapTitleBackground: black;
+  --rapBoxShadow: blue;
+  --rapTitleText: white;
+  --rapGenreSelectBackground: blue;
+  --rapGenreSelectText: ghostwhite;
+  --rapButtonBackground: blue;
+  --rapButtonText: ghostwhite;
+  --rapBorder: black;
+
+  --countryBackground: #ffd700;
+  --countryTitleBackground: #ffa500;
+  --countryBoxShadow: black;
+  --countryTextBackground: #fff8dc;
+  --countryTitleText: black;
+  --countryGenreSelectBackground: #8b0000;
+  --countryGenreSelectText: white;
+  --countryButtonBackground: #8b0000;
+  --countryButtonText: white;
+  --countryBorder: #8b0000;
+}
+
+* {
+  font-family: avenir;
+}
+
+body {
+  background-color: var(--mainBackgroundColor);
+}
+
+#input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block;
+}
+
+h1 {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  justify-content: center;
+  width: 30rem;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: var(--mainTextBackground);
+  border-radius: 15px;
+  box-shadow: 10px 5px 5px var(--mainBorder);
+}
+
+input,
+button,
+select {
+  font-size: 25px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#copy-button-container,
+#message-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#tab-span {
+  margin-left: 50px;
+}
+
+#copy-button {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 50px;
+  width: 50px;
+  /* font-size: 15px; */
+}
+
+#message-element {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 3px;
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+
+#results-element {
+  font-size: 30px;
+  padding-top: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+#output-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1250px) {
+  h1 {
+    font-size: 30px;
+    width: 20rem;
+  }
+
+  input,
+  button,
+  select {
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  #description {
+    font-size: 10px;
+  }
+  #message-element {
+    font-size: 10px;
+  }
+
+  #submit-fewer {
+    font-size: 10px;
+  }
+
+  #copy-button {
+    height: 30px;
+    width: 30px;
+  }
+
+  #results-element {
+    font-size: 10px;
+  }
+
+  #tab-span {
+    margin-left: 20px;
+  }
+}
