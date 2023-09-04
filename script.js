@@ -1,5 +1,13 @@
 var blackMetalWords = [
   "black",
+  "lichen",
+  "blistering",
+  "hall",
+  "chamber",
+  "maze",
+  "vortex",
+  "torn",
+  "devour",
   "Beyond",
   "vast",
   "gulf",
@@ -656,6 +664,58 @@ var blackMetalWords = [
 
 var indieWords = [
   "dove",
+  "human",
+  "pluck",
+  "hop",
+  "stung",
+  "yellowjacket",
+  "dropped",
+  "swell",
+  "divine",
+  "mantle",
+  "undone",
+  "holds",
+  "key",
+  "sanctuary",
+  "crescendo",
+  "feminine",
+  "femme",
+  "velvet",
+  "plush",
+  "conjugation",
+  "arpeggio",
+  "soliloquy",
+  "fiction",
+  "poetry",
+  "tradition",
+  "secret",
+  "spinning",
+  "sapling",
+  "ewe",
+  "lamb",
+  "lacrimae",
+  "cimmerian",
+  "rotating",
+  "ocean",
+  "sea",
+  "living",
+  "thin",
+  "listen",
+  "ponder",
+  "speak",
+  "conversation",
+  "afford",
+  "all my life",
+  "pillar",
+  "ripples",
+  "reside",
+  "apology",
+  "fulminate",
+  "seeking",
+  "absorbs",
+  "reverberating",
+  "radiates",
+  "echoes",
   "Bacchanal",
   "reverie",
   "futile",
@@ -706,12 +766,18 @@ var indieWords = [
   "flute",
   "exorcismic",
   "aeroplane",
-  "sea",
+  "gone",
+  "blink",
   "tulips",
   "peony",
+  "eve",
   "sunflower",
   "seeds",
   "rose",
+  "rosemary",
+  "thyme",
+  "cinnamon",
+  "guiding",
   "marigold",
   "snapdragon",
   "lavender",
@@ -748,6 +814,7 @@ var indieWords = [
   "falling",
   "to",
   "never",
+  "allegory",
   "forget",
   "safety",
   "if",
@@ -876,7 +943,7 @@ var indieWords = [
   "girl",
   "festival",
   "explain",
-  "embarassing",
+  "embarrassing",
   "disaster",
   "performance",
   "mousy",
@@ -1211,6 +1278,7 @@ var indieWords = [
   "tempest",
   "tempestuous",
   "fidelity",
+  "feather",
   "vulpine",
   "engenders",
   "renew",
@@ -1851,8 +1919,11 @@ var countryWords = [
   "baby",
   "valley",
   "closing time",
+  "countryside",
   "last call",
   "pigeon",
+  "reckon",
+  "shoot",
   "suit and tie",
   "hellhound",
   "saddle",
@@ -2448,9 +2519,8 @@ var inputContainer = document.querySelector("#input-container");
 var genreSelect = document.querySelector("#genre");
 var numberInput = document.querySelector("#number-of-words");
 var submitButton = document.querySelector("#submit-button");
-var copyButtonContainer = document.querySelector("#copy-button-container");
 var messageContainer = document.querySelector("#message-container");
-var copyButton = document.querySelector("#copy-button");
+var copyButtonContainer = document.querySelector("#copy-button-container");
 var outputContainer = document.querySelector("#output-container");
 var resultsElement = document.querySelector("#results-element");
 
@@ -2657,7 +2727,8 @@ function displayMessage(message, isError = false) {
   const messageElement = document.createElement("div");
   messageElement.id = "message-element";
   messageElement.style.color = messageElementText;
-  messageElement.style.border = messageElementBorder;
+  messageElement.style.backgroundColor = textBackground;
+  messageElement.style.border = borderColor;
   messageElement.textContent = message;
   messageElement.className = isError ? "error-message" : "success-message";
   copyButtonContainer.appendChild(messageElement);
@@ -2666,7 +2737,6 @@ function displayMessage(message, isError = false) {
     copyButtonContainer.removeChild(messageElement);
   }, 1000);
 }
-
 function changeTheme() {
   checkGenre();
   resultsElement.textContent = "";
