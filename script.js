@@ -2446,7 +2446,6 @@ var titleText = document.querySelector("#title-text");
 var container = document.querySelector("#container");
 var inputContainer = document.querySelector("#input-container");
 var genreSelect = document.querySelector("#genre");
-var genreMenu = document.querySelector("#genre");
 var numberInput = document.querySelector("#number-of-words");
 var submitButton = document.querySelector("#submit-button");
 var copyButtonContainer = document.querySelector("#copy-button-container");
@@ -2454,7 +2453,6 @@ var messageContainer = document.querySelector("#message-container");
 var copyButton = document.querySelector("#copy-button");
 var outputContainer = document.querySelector("#output-container");
 var resultsElement = document.querySelector("#results-element");
-var genreChosen;
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -2482,7 +2480,7 @@ function createParagraphs() {
     ) {
       makePElement();
     }
-  } else {
+  } else if (numberInput.value > 10 && genreSelect.value !== "null") {
     var submitLessMessage = document.createElement("p");
     submitLessMessage.textContent =
       "Please request 10 or fewer paragraphs at a time";
@@ -2703,4 +2701,18 @@ function changeTheme() {
   everything.style.backgroundColor = pageBackgroundColor;
 }
 
-submitButton.addEventListener("click", createParagraphs);
+function checkForGenreSelected() {
+  if (genreSelect.value) {
+    createParagraphs();
+  } else {
+    var selectGenreMessage = document.createElement("p");
+    selectGenreMessage.textContent = "Please select a genre";
+    selectGenreMessage.id = "submit-fewer";
+    inputContainer.appendChild(selectGenreMessage);
+    setTimeout(() => {
+      inputContainer.removeChild(selectGenreMessage);
+    }, 2000);
+  }
+}
+
+submitButton.addEventListener("click", checkForGenreSelected);
