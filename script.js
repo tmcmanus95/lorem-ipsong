@@ -2514,21 +2514,8 @@ function makePElement() {
     } else if (sentenceIndex === numberOfSentences) {
       outputContainer.appendChild(resultsElement);
     }
-    outputContainer.style.backgroundColor = textBackground;
-    copyButtonContainer.style.backgroundColor = textBackground;
-    descrptionLine.style.color = textColor;
-    descrptionLine.textContent = descriptionText;
-    titleText.style.backgroundColor = titleBackground;
-    titleText.style.color = titleTextColor;
-    titleText.style.boxShadow = boxShadowColor;
-    genreSelect.style.backgroundColor = genreSelectBackground;
-    genreSelect.style.color = genreSelectText;
-    submitButton.style.backgroundColor = buttonBackground;
-    submitButton.style.color = buttonText;
-    container.style.border = borderColor;
-    container.style.backgroundColor = textBackground;
-    everything.style.backgroundColor = pageBackgroundColor;
   }
+
   function generateNextSentence() {
     lengthOfSentence = getRandomInt(6, 25);
 
