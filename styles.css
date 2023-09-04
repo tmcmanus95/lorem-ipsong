@@ -16,16 +16,16 @@
   --blackMetalButtonText: black;
   --blackMetalBorder: ghostwhite;
 
-  --indieBackground: lemonchiffon; /* 5% */
-  --indieTextBackground: honeydew; /* 76% */
-  --indieTitleBackground: lavender; /* 10% */
-  --indieBoxShadow: black; /* 2% */
+  --indieBackground: lemonchiffon;
+  --indieTextBackground: honeydew;
+  --indieTitleBackground: lavender;
+  --indieBoxShadow: black;
   --indieTitleText: black;
-  --indieGenreSelectBackground: lavender; /* 2% */
-  --indieGenreSelectText: black; /* 1% */
-  --indieButtonBackground: powderblue; /* 2% */
-  --indieButtonText: black; /* 2% */
-  --indieBorder: powderblue; /* 1% */
+  --indieGenreSelectBackground: lavender;
+  --indieGenreSelectText: black;
+  --indieButtonBackground: powderblue;
+  --indieButtonText: black;
+  --indieBorder: powderblue;
 
   --rapBackground: blue;
   --rapTextBackground: gold;
@@ -64,6 +64,7 @@ body {
   align-items: center;
   text-align: center;
   display: block;
+  padding-bottom: 20px;
 }
 
 h1 {

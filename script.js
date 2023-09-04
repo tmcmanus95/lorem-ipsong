@@ -1843,7 +1843,54 @@ var rapWords = [
 
 var countryWords = [
   "baby",
+  "valley",
+  "closing time",
+  "last call",
+  "pigeon",
+  "suit and tie",
+  "hellhound",
+  "saddle",
+  "memory",
+  "mare",
+  "Bessie",
+  "cow",
+  "cowpoke",
+  "city slicker",
+  "out of town",
+  "vista",
+  "off-roading",
+  "beggin'",
+  "ma'am",
+  "sir",
+  "rope",
+  "settling",
+  "big fat",
+  "heart",
+  "ride",
+  "pony",
+  "cattle",
+  "stealing",
+  "robbing",
+  "sidekick",
+  "Jesse James",
+  "ranger",
+  "shotgun",
+  "burning",
+  "cry",
+  "heartache",
+  "old",
+  "ole",
+  "sho-nuff",
+  "boys",
+  "kinda",
+  "some",
+  "lock",
+  "lyin'",
+  "fool",
+  "breeze",
+  "ranch",
   "gallows",
+  "rope",
   "rawhide",
   "sierra",
   "Nevada",
@@ -2367,6 +2414,18 @@ var countryWords = [
   "steak",
   "campfire",
   "trail",
+  "lady",
+  "lowlands",
+  "horizon",
+  "town",
+  "Greyhound",
+  "station",
+  "blowin'",
+  "poker",
+  "gamblin'",
+  "sorrow",
+  "sorry",
+  "son of a gun",
 ];
 
 var everything = document.querySelector("#everything");
@@ -2475,27 +2534,13 @@ function makePElement() {
   }
   loopThroughSentences();
   resultsElement.appendChild(pElement);
-  outputContainer.style.backgroundColor = textBackground;
   pElement.style.color = textColor;
-  titleText.style.color = textColor;
-  descrptionLine.style.color = textColor;
-  descrptionLine.textContent = descriptionText;
-  titleText.style.backgroundColor = titleBackground;
-  titleText.style.color = titleTextColor;
-  titleText.style.boxShadow = boxShadowColor;
-  genreSelect.style.backgroundColor = genreSelectBackground;
-  genreSelect.style.color = genreSelectText;
-  submitButton.style.backgroundColor = buttonBackground;
-  submitButton.style.color = buttonText;
-  container.style.border = borderColor;
-  container.style.backgroundColor = textBackground;
-  everything.style.backgroundColor = pageBackgroundColor;
 
   outputContainer.appendChild(resultsElement);
 }
 
 function checkGenre() {
-  if (genreMenu.value === "black-metal") {
+  if (genreSelect.value === "black-metal") {
     genreChosen = blackMetalWords;
     pageBackgroundColor = "var(--blackMetalBackground)";
     textBackground = "var(--blackMetalTextBackground)";
@@ -2517,7 +2562,7 @@ function checkGenre() {
     submitLessMessageText = "white";
     favIcon.href = "./icons/metalicon.png";
     copyButtonSource = "./icons/copypasteblack.png";
-  } else if (genreMenu.value === "indie") {
+  } else if (genreSelect.value === "indie") {
     genreChosen = indieWords;
     pageBackgroundColor = "var(--indieBackground)";
     textBackground = "var(--indieTextBackground)";
@@ -2539,7 +2584,7 @@ function checkGenre() {
     submitLessMessageText = "black";
     favIcon.href = "./icons/indieicon.png";
     copyButtonSource = "./icons/copypaste.png";
-  } else if (genreMenu.value === "rap") {
+  } else if (genreSelect.value === "rap") {
     genreChosen = rapWords;
     pageBackgroundColor = "var(--rapBackground)";
     textBackground = "var(--rapTextBackground)";
@@ -2561,7 +2606,7 @@ function checkGenre() {
     submitLessMessageText = "black";
     favIcon.href = "./icons/rapicon.png";
     copyButtonSource = "./icons/copypaste.png";
-  } else if (genreMenu.value === "country") {
+  } else if (genreSelect.value === "country") {
     genreChosen = countryWords;
     pageBackgroundColor = "var(--countryBackground)";
     textBackground = "var(--countryTextBackground)";
@@ -2611,6 +2656,27 @@ function displayMessage(message, isError = false) {
   setTimeout(() => {
     copyButtonContainer.removeChild(messageElement);
   }, 1000);
+}
+
+function changeTheme() {
+  checkGenre();
+  resultsElement.textContent = "";
+  outputContainer.textContent = "";
+  copyButtonContainer.textContent = "";
+  outputContainer.style.backgroundColor = textBackground;
+  copyButtonContainer.style.backgroundColor = textBackground;
+  descrptionLine.style.color = textColor;
+  descrptionLine.textContent = descriptionText;
+  titleText.style.backgroundColor = titleBackground;
+  titleText.style.color = titleTextColor;
+  titleText.style.boxShadow = boxShadowColor;
+  genreSelect.style.backgroundColor = genreSelectBackground;
+  genreSelect.style.color = genreSelectText;
+  submitButton.style.backgroundColor = buttonBackground;
+  submitButton.style.color = buttonText;
+  container.style.border = borderColor;
+  container.style.backgroundColor = textBackground;
+  everything.style.backgroundColor = pageBackgroundColor;
 }
 
 submitButton.addEventListener("click", createParagraphs);
