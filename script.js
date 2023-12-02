@@ -1794,7 +1794,8 @@ var rapWords = [
   "jewelry",
   "necklace",
   "rings",
-  "crackers",
+  "aspiring",
+  "inspiring",
   "different",
   "colors",
   "trap",
@@ -1842,8 +1843,6 @@ var rapWords = [
   "crews",
   "runnin'",
   "laced",
-  "bullet",
-  "holes",
   "speak",
   "army",
   "team",
@@ -2001,11 +2000,17 @@ var rapWords = [
   "shoo-in",
   "mask",
   "unpredictable",
+  "masterpiece",
+  "stellar",
 ];
 
 var countryWords = [
   "baby",
   "New Orleans",
+  "rickity",
+  "porch",
+  "daisy dukes",
+  "cold one",
   "Charlotte",
   "Asheville",
   "Chattanooga",
@@ -2606,7 +2611,24 @@ var countryWords = [
   "sorry",
   "son of a gun",
   "revolver",
+  "yee haw",
+  "little doggie",
+  "yippie kay yay",
 ];
+
+function removeDuplicates(array) {
+  // Create a Set from the array to automatically remove duplicates
+  const uniqueSet = new Set(array);
+
+  // Convert the Set back to an array
+  const uniqueArray = Array.from(uniqueSet);
+
+  return uniqueArray;
+}
+
+const newArray = removeDuplicates(indieWords);
+console.log(indieWords.length);
+console.log(newArray.length);
 
 var everything = document.querySelector("#everything");
 var tabText = document.querySelector("#tab-text");
