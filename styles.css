@@ -134,6 +134,11 @@ select {
   flex-direction: row;
 }
 
+footer {
+  text-align: center;
+  font-family: avenir;
+}
+
 @media (max-width: 700px) {
   #title-text {
     width: 20rem;
