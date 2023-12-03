@@ -2644,7 +2644,7 @@ var messageContainer = document.querySelector("#message-container");
 var copyButtonContainer = document.querySelector("#copy-button-container");
 var outputContainer = document.querySelector("#output-container");
 var resultsElement = document.querySelector("#results-element");
-
+var footer = document.querySelector("#footer");
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -2748,6 +2748,7 @@ function checkGenre() {
     titleBackground = "var(--blackMetalTitleBackground)";
     titleTextColor = "var(--blackMetalTitleText)";
     boxShadowColor = "3px 3px 3px var(--blackMetalBoxShadow)";
+    footer.style.color = "white";
     genreSelectBackground = "var(--blackMetalGenreSelectBackground)";
     genreSelectText = "var(--blackMetalGenreSelectText)";
     buttonBackground = "var(--blackMetalButtonBackground)";
@@ -2770,6 +2771,7 @@ function checkGenre() {
     titleBackground = "var(--indieTitleBackground)";
     titleTextColor = "var(--indieTitleText)";
     boxShadowColor = "3px 3px 3px var(--indieBoxShadow)";
+    footer.style.color = "black";
     genreSelectBackground = "var(--indieGenreSelectBackground)";
     genreSelectText = "var(--indieGenreSelectText)";
     buttonBackground = "var(--indieButtonBackground)";
@@ -2792,6 +2794,7 @@ function checkGenre() {
     titleBackground = "var(--rapTitleBackground)";
     titleTextColor = "var(--rapTitleText)";
     boxShadowColor = "10px 5px 5px var(--rapBoxShadow)";
+    footer.style.color = "black";
     genreSelectBackground = "var(--rapGenreSelectBackground)";
     genreSelectText = "var(--rapGenreSelectText)";
     buttonBackground = "var(--rapButtonBackground)";
@@ -2814,6 +2817,7 @@ function checkGenre() {
     titleBackground = "var(--countryTitleBackground)";
     titleTextColor = "var(--countryTitleText)";
     boxShadowColor = "3px 3px 3px var(--countryBoxShadow)";
+    footer.style.color = "black";
     genreSelectBackground = "var(--countryGenreSelectBackground)";
     genreSelectText = "var(--countryGenreSelectText)";
     buttonBackground = "var(--countryButtonBackground)";
