@@ -21,6 +21,7 @@ var blackMetalWords = [
   "creak",
   "pounding",
   "throbbing",
+  "gushing",
   "pulvarize",
   "bashing",
   "smash",
