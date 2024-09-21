@@ -1,5 +1,7 @@
 var blackMetalWords = [
   "black",
+  "dirge",
+  "liturgy",
   "heresy",
   "warrior",
   "beastial",
@@ -670,10 +672,15 @@ var blackMetalWords = [
   "terrible",
   "struggle",
   "sullen",
+  "requiem",
 ];
 
 var indieWords = [
   "dove",
+  "pulse",
+  "canticle",
+  "monody",
+  "quill",
   "human",
   "pluck",
   "harmonize",
@@ -920,6 +927,7 @@ var indieWords = [
   "mindset",
   "find",
   "New York",
+
   "van",
   "with my friend",
   "I don't mind",
@@ -1323,6 +1331,8 @@ var indieWords = [
   "somebody",
   "vamoose",
   "coals",
+  "plume",
+  "crest",
   "refuse",
   "flock",
   "long ago",
@@ -1384,10 +1394,13 @@ var indieWords = [
   "tranquility",
   "sunrise",
   "retrograde",
+  "requiem",
 ];
 
 var rapWords = [
   "yeah",
+  "pulse",
+  "cuz",
   "flow",
   "ruckus",
   "sword",
@@ -2040,6 +2053,7 @@ var countryWords = [
   "valley",
   "closing time",
   "countryside",
+  "darn",
   "last call",
   "pigeon",
   "reckon",
@@ -2219,6 +2233,7 @@ var countryWords = [
   "tremblin'",
   "street",
   "boots",
+  "boostrap",
   "America",
   "old faithful",
   "moon",
@@ -2586,6 +2601,7 @@ var countryWords = [
   "stop",
   "lovin'",
   "country",
+  "wagon",
   "hallelujah",
   "rhinestone",
   "bolo",
