@@ -1,5 +1,6 @@
 var blackMetalWords = [
   "black",
+  "acrimonious",
   "dirge",
   "liturgy",
   "heresy",
@@ -177,6 +178,7 @@ var blackMetalWords = [
   "new",
   "want",
   "because",
+  "caustic",
   "any",
   "these",
   "give",
