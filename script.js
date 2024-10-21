@@ -179,6 +179,8 @@ var blackMetalWords = [
   "want",
   "because",
   "caustic",
+  "mordant",
+  "corroding",
   "any",
   "these",
   "give",
@@ -679,6 +681,7 @@ var blackMetalWords = [
 
 var indieWords = [
   "dove",
+  "ceremony",
   "pulse",
   "canticle",
   "monody",
@@ -695,6 +698,7 @@ var indieWords = [
   "sweater",
   "distaste",
   "golden",
+  "shawl",
   "counselor",
   "twisted",
   "outside",
